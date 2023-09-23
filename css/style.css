@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #1E1E23;
+  opacity:1;
+  font-family: 'work sans', sans serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: 200ms;
+}
+a:hover {
+  opacity:0.5;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+.container {
+  margin-top: 5px; 
+  Display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  background-color: #36383F;
+  border-radius: 40px;
+  width: 300px;
+  height: 650px;
+  Display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 50px 100px #85888C;
+}
+.content {
+  border: 1px solid #36383F;
+  border-radius: 20px;
+  width: 94%;
+  height: 95%;
+  background-color: #c0f502;
+  overflow: hidden;
+}
+nav {
+  background-color: #1E1E23;
+  height: 65px;
+}
+
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span{
+  display: flex;
+  width: 29px;
+  height: 2px;
+  font-size: 25px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #c0f502;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383F;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  font-size: 14px;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: rgb(21, 204, 21);
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+} 
+
+
+/* codigo estilo card */
+h1{
+  position: absolute;
+  top: 25%;
+  left:89px;
+  font-family: 'Abril Fatface', cursive;
+  color:black;
+  font-size: 26px;
+  
+}
+
+.logo img{
+  width: 270px;
+  height: 190px;
+  margin-left: -10%;
+  margin-top: 1%;
+}
+
+/*  texto invertido */
+.vertical-text {
+  position: absolute;
+  top: 50%; /* Ajusta la posición vertical según tus necesidades*/ 
+  left: 5%; /*Ajusta la posición horizontal según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+} 
+
+.vertical-text span {
+  writing-mode: vertical-lr; /*  Esto rota el texto verticalmente */
+  text-orientation: upright;
+  font-size: 18px; /* Ajusta el tamaño del texto según tus necesidades */
+  margin-bottom: 10px;  /*Espacio entre las palabras*/
+}
+/* Final texto invertido */
+
+
+/*  Palabras en posición oblicua
+  .oblique-text {
+  position:absolute;
+  margin-left: 442px;
+  margin-top: 19px;
+  color:white;
+  border-radius: 20px;
+  background-color: rgb(4, 200, 4);
+  height: 90px;
+  width: 23px;
+  padding: -1px;
+  font-style: italic;  Pone el texto en itálica, dando la apariencia de oblicuo 
+  transform: rotate(45deg); Rota el texto 45 grados
+  letter-spacing: -10px;
+  font-weight: 900;
+}
+Fin palabras en posición oblicua*/
+.text1{
+  margin-top: -240px;
+  margin-left: 53px;
+  padding-top: 5px;
+  font-size: 62px;
+  border-radius: 20px;
+  font-weight: 900;
+  color:rgb(21, 204, 21);
+  letter-spacing: -6px;
+  width: 23px;
+  height: 210px;
+  z-index: -1;
+}
+.text2{
+  z-index: -1;
+  margin-top: -200px;
+  margin-left: 190px;
+  font-size: 28px;
+  font-weight: 900;
+  color:rgb(21, 204, 21);
+  letter-spacing: -6px;
+  width: 23px;
+  height: 130px;
+  border-radius: 20px;
+  padding-top: 5px;
+}  
+
+/* Main- Lista de Tareas */
+main{
+  width: 100%;
+  height: 350px;
+  background-color: rgb(146, 144, 144);
+  padding: 10px;
+}  
+main h2{
+color: #c0f502;
+font-size: 20px;
+font-family: sans-serif;
+margin-top: 4%;
+margin-left: 6px;
+}
+main input{
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 6%;
+  width: 245px;
+  height: 30px;
+  border:none;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+main button{
+  font-size: 16px;
+  font-weight: 700;
+  color: #36383F;
+  background:#C0F502 ;
+  width: 200px;
+  height: 30px;
+  margin-top: 4%;
+  border-radius: 20px;
+  padding-top: -1px;
+  border: none;
+}
+.header-begin{
+  width: 100%;
+  height:350px ;
+  background-color: #c0f502;
+  margin-top: -11%;
+}
+.header-begin img{
+  width: 200px;
+  height: 300px;
+  margin-top: -2%;
+  margin-left: 19%;
+  border-radius:50% ;
+}
+/* Estilos para la lista de tareas */
+main ul {
+  margin-top: 3%;
+  list-style-type: none;
+  padding: 0;
+}
+
+main li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+main li input[type="checkbox"] {
+  margin-left: -23%;
+  border:none;
+}
+
+main li label {
+  font-size: 16px;
+  width: 200px;
+  font-weight: 600;
+  color:#36383F;
+  flex-grow: 1;
+  margin-left: -65px;
+  padding-top: 20px;
+}
+
+main li button {
+  background-color: #c0f502;
+  color: #36383F;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 140px;
+  margin-top: 20px;
+}
+
+/* estilos para el login */
+.section-registro .login button{
+  border-radius: 5px;
+  border: 2px solid #cccccc;
+  width: 90px;
+  height: 30px;
+  font-size: 14px;
+  color:#868282;
+  background-color: none;
+}
+.section-registro h3{
+  font-family:'Poppins', sans-serif ;
+  font-weight: bold !important;
+  font-size: 22px;
+  margin-left: -2px;
+}
+.section-registro a{
+  font-size: 18px;
+  margin-left: 2px;
+
+}
+section {
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333333;
+}
+
+p a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+
+/* estilos para el form de registro */
+.section-registro {
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-registro h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.section-registro  form .login__field {
+  margin-bottom: 10px;
+}
+
+.section-registro .login__input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.section-registro input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.section-registro input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.section-registro h3{
+  font-size: 12px;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.section-registro h3 a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#showSignupForm {
+  font-size: 14px;
+  color: #4caf50;
+  cursor: pointer;
+}
+/* estilos login-form del index*/
+.section-loginA{
+  margin-top: 25%;
+  background-color: #C0F502;
+  box-shadow: none;
+}
+#loginForm {
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#loginForm input[type="email"],
+#loginForm input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: none;
+  border-bottom: 2px solid #585757; 
+  margin-bottom: 10px;
+  font-size: 14px;
+  background: none; /* Asegura que el fondo sea transparente */
+  outline: none; /* saca el contorno predeterminado al posicionarme en el input */
+}
+
+#loginForm input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#loginForm input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#loginForm label {
+  display: none; /* Oculta las etiquetas para que no aparezcan */
+}
+#loginForm p{
+  font-size: 12px;
+}
